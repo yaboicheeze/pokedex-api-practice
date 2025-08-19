@@ -76,12 +76,12 @@ const ExpandedEntry = () => {
                 <p>Weight: {weightConversion(pokemonWeight)} kg</p>
             </div>
             <div className="statLayout">
-                <p>Base HP: {pokemonHP}</p>
-                <p>Base Attack: {pokemonAttack}</p>
-                <p>Base Defense: {pokemonDefense}</p>
-                <p>Base Special Attack: {pokemonSpecialAttack}</p>
-                <p>Base Special Defense: {pokemonSpecialDefense}</p>
-                <p>Base Speed: {pokemonSpeed}</p>
+                <p>Base HP: {pokemonHP} </p>
+                <p>Base Attack: {pokemonAttack} </p>
+                <p>Base Defense: {pokemonDefense} </p>
+                <p>Base Special Attack: {pokemonSpecialAttack} </p>
+                <p>Base Special Defense: {pokemonSpecialDefense} </p>
+                <p>Base Speed: {pokemonSpeed} </p>
             </div>
         </div>
     );
