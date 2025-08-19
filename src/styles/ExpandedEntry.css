@@ -1,0 +1,38 @@
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    background-color: rgb(113, 39, 31);
+    color: white;
+    padding: 30px;
+}
+
+.expandedImage {
+    width: 30%;
+    height: auto;
+}
+
+.statLayout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    gap: 30px;
+    background-color: rgb(216, 97, 92);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+button {
+    margin: 10px;
+}
+
+.returnButton {
+    position: absolute;
+    left: 20%;
+}
