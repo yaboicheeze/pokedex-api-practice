@@ -1,0 +1,14 @@
+div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+p {
+
+}
