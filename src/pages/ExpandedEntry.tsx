@@ -2,17 +2,18 @@ import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Axios from "axios";
 import '../styles/ExpandedEntry.css'
-import {combineTyping, capitalize, heightConversion, weightConversion} from "../scripts/pokemonScripts.ts";
+import {combineTyping, capitalize } from "../scripts/pokemonScripts.ts";
 
 /**
  * imports info for then displays expanded list of pokemon statistics and info
  * @constructor
+ * @return returns the expanded list of pokemon info
  */
 const ExpandedEntry = () => {
     const { pokemonNum } = useParams<{ pokemonNum: string }>();
 
-    const [pokemonImage, setPokemonImage] = useState();
-    const [pokemonShinyImage, setPokemonShinyImage] = useState();
+    const [pokemonImage, setPokemonImage] = useState("");
+    const [pokemonShinyImage, setPokemonShinyImage] = useState("");
     const [pokemonName, setPokemonName] = useState("");
     const [pokemonType1, setPokemonType1] = useState("");
     const [pokemonType2, setPokemonType2] = useState("");
@@ -22,7 +23,7 @@ const ExpandedEntry = () => {
     const [pokemonSpecialAttack, setPokemonSpecialAttack] = useState<number>();
     const [pokemonSpecialDefense, setPokemonSpecialDefense] = useState<number>();
     const [pokemonSpeed, setPokemonSpeed] = useState<number>();
-    const [pokemonCry, setPokemonCry] = useState();
+    const [pokemonCry, setPokemonCry] = useState("");
     const [pokemonWeight, setPokemonWeight] = useState<number>();
     const [pokemonHeight, setPokemonHeight] = useState<number>();
 
@@ -52,6 +53,24 @@ const ExpandedEntry = () => {
      */
     function playPokemonCry() {
         new Audio(pokemonCry).play();
+    }
+
+    /**
+     * Converts weight to proper kg (i.e. api gives 905, converts to 90.5)
+     * @param weight number to convert to correct weight
+     * @return returns proper weight as a number
+     */
+    function weightConversion (weight: number | undefined){
+        return weight/10;
+    }
+
+    /**
+     * converts height to proper cm (i.e. api gives 17, converts to 170)
+     * @param height number to convert to correct height
+     * @return retuns proper height as a number
+     */
+    function heightConversion (height: number | undefined){
+        return height*10;
     }
 
     return (

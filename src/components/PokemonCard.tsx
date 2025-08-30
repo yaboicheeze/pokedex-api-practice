@@ -12,9 +12,10 @@ interface PokemonCardProps {
  * imports info then displays basic thumbnail card of a given pokemon
  * @param pokemonNum Number of the pokemon to be searched for in api and displayed
  * @constructor
+ * @return returns a component with simple pokemon info
  */
 const PokemonCardComponent: FC<PokemonCardProps> = ({ pokemonNum }) => {
-    const [pokemonImage, setPokemonImage] = useState();
+    const [pokemonImage, setPokemonImage] = useState("");
     const [pokemonName, setPokemonName] = useState("");
     const [pokemonType1, setPokemonType1] = useState("");
     const [pokemonType2, setPokemonType2] = useState("");
